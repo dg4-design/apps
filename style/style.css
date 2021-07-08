@@ -324,6 +324,12 @@ header nav ul li a {
 .gum-body .gum-app .wrapper #gumButton {
   display: block;
   position: absolute;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   left: 0;
   right: 0;
   bottom: 32px;
