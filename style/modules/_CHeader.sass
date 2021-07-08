@@ -7,6 +7,12 @@ header
 
   padding: 0 20px
 
+  @include sp
+    height: auto
+    flex-direction: column
+    padding: 12px 12px 0 12px
+    gap: 8px
+
   .title
     font-size: 24px
   nav
@@ -20,3 +26,6 @@ header
           font-weight: bold
 
           padding: 16px
+
+          @include sp
+            padding: 16px 12px

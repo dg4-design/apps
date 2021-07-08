@@ -248,6 +248,18 @@ header {
   padding: 0 20px;
 }
 
+@media (max-width: 640px) {
+  header {
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 12px 12px 0 12px;
+    gap: 8px;
+  }
+}
+
 header .title {
   font-size: 24px;
 }
@@ -263,6 +275,12 @@ header nav ul li a {
   padding: 16px;
 }
 
+@media (max-width: 640px) {
+  header nav ul li a {
+    padding: 16px 12px;
+  }
+}
+
 .gum-body .gum-app {
   width: 100vw;
   height: calc(100vh - 70px);
@@ -272,6 +290,7 @@ header nav ul li a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0 12px;
 }
 
 .gum-body .gum-app .wrapper {
@@ -284,6 +303,12 @@ header nav ul li a {
   border-radius: 20px;
   -webkit-box-shadow: 2px 6px 39px 0px #3b31002d;
           box-shadow: 2px 6px 39px 0px #3b31002d;
+}
+
+@media (max-width: 640px) {
+  .gum-body .gum-app .wrapper {
+    height: 250px;
+  }
 }
 
 .gum-body .gum-app .wrapper .output {
