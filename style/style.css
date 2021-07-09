@@ -173,6 +173,12 @@ select {
   color: #333;
 }
 
+img {
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+}
+
 .is-flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -279,6 +285,104 @@ header nav ul li a {
   header nav ul li a {
     padding: 16px 12px;
   }
+}
+
+.top-main {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+@media (max-width: 1024px) {
+  .top-main {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+@media (max-width: 640px) {
+  .top-main {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  .top-main .apps-link .container .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.top-main .apps-link .container .content .item {
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 24px;
+  padding: 32px;
+  background-color: #f4f4f4;
+}
+
+@media (max-width: 640px) {
+  .top-main .apps-link .container .content .item {
+    padding: 16px;
+  }
+}
+
+.top-main .apps-link .container .content .item .img {
+  width: 100%;
+  height: auto;
+}
+
+.top-main .apps-link .container .content .item .over {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+
+.top-main .apps-link .container .content .item .over .btn {
+  text-decoration: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #4B91B6;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 5px;
+}
+
+.top-main .apps-link .container .content .item .over .create-at {
+  color: #777;
+  font-size: 80%;
+}
+
+.top-main .apps-link .container .content .item .over p {
+  line-height: 1.4em;
+}
+
+.top-main .apps-link .container .content .item.under {
+  -webkit-filter: brightness(0.5);
+          filter: brightness(0.5);
+}
+
+.top-main .apps-link .container .content .item.under .img {
+  visibility: hidden;
+}
+
+footer {
+  padding: 16px 0;
+}
+
+footer .copy {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 12px;
 }
 
 .gum-body {

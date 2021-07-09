@@ -1,0 +1,53 @@
+.top-main
+  padding-top: 100px
+  padding-bottom: 100px
+
+  @include tab
+    padding-top: 60px
+    padding-bottom: 60px
+
+  @include sp
+    padding-top: 30px
+    padding-bottom: 30px
+  .apps-link
+    .container
+      .content
+        @include sp
+          flex-direction: column
+        .item
+          width: 100%
+
+          flex-direction: column
+
+          gap: 24px
+
+          padding: 32px
+          background-color: #f4f4f4
+
+          @include sp
+            padding: 16px
+          .img
+            width: 100%
+            height: auto
+
+          .over
+            flex-direction: column
+            gap: 16px
+
+            .btn
+              text-decoration: none
+              width: fit-content
+              background-color: #4B91B6
+              color: #fff
+              padding: 8px 16px
+              border-radius: 5px
+            .create-at
+              color: #777
+              font-size: 80%
+            p
+              line-height: 1.4em
+
+          &.under
+            filter: brightness(0.5)
+            .img
+              visibility: hidden
