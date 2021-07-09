@@ -151,9 +151,6 @@ gumButton.onclick = function gumTalk() {
   //↑で取得したガムのデータの中のトークテーマをランダムに取得
   const getTheme = random(getGum);
 
-  // const numberElement = document.getElementById("number");
-  // numberElement.innerHTML = JSON.stringify(getTheme.id);
-
   var i = 0;
   const themeElement = document.getElementById("card");
 

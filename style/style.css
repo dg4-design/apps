@@ -281,6 +281,11 @@ header nav ul li a {
   }
 }
 
+.gum-body {
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+}
+
 .gum-body .gum-app {
   width: 100vw;
   height: calc(100vh - 70px);
