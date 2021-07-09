@@ -137,6 +137,7 @@ const gumData = [
   ],
 ];
 
+const themeElement = document.getElementById("card");
 const gumButton = document.getElementById("gumButton");
 
 gumButton.onclick = function gumTalk() {
@@ -151,30 +152,30 @@ gumButton.onclick = function gumTalk() {
   //↑で取得したガムのデータの中のトークテーマをランダムに取得
   const getTheme = random(getGum);
 
-  var i = 0;
-  const themeElement = document.getElementById("card");
-
   const result = [];
+
   themeElement.textContent = "";
 
   for (var i = 0; i < getGum.length; i++) {
     result.push(i);
 
-    if (JSON.stringify(getGum[i].id) == getTheme.id) {
+    if (getGum[i].id == getTheme.id) {
       const kakikomuElements =
         "<div class='item accent is-flex'><p class='number'>" +
-        JSON.stringify(getGum[i].id) +
+        getGum[i].id +
         "</p><p class='theme'>" +
-        JSON.stringify(getGum[i].theme).replace(/"/g, "") +
+        getGum[i].theme +
         "話</p></div>";
+
       themeElement.insertAdjacentHTML("afterbegin", kakikomuElements);
     } else {
       const kakikomuElements =
         "<div class='item is-flex''><p class='number'>" +
-        JSON.stringify(getGum[i].id) +
+        getGum[i].id +
         "</p><p class='theme'>" +
-        JSON.stringify(getGum[i].theme).replace(/"/g, "") +
+        getGum[i].theme +
         "話</p></div>";
+
       themeElement.insertAdjacentHTML("afterbegin", kakikomuElements);
     }
   }
