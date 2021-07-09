@@ -12,10 +12,11 @@
   .app-link
     .container
       .content
+        flex-wrap: wrap
         @include sp
           flex-direction: column
         .item
-          width: 100%
+          width: 50%
 
           flex-direction: column
 
@@ -25,10 +26,11 @@
           background-color: #f4f4f4
 
           @include sp
+            width: 100%
             padding: 16px
           .img
             width: 100%
-            height: auto
+            height: 212px
 
           .over
             flex-direction: column
