@@ -27,6 +27,7 @@
 
   <main class="gum-app is-flex">
     <div class="wrapper is-flex">
+      <div class="record">現在<span id="howMany"></span>個の話題が登録されています</div>
       <div class="output is-flex">
         <div id="card" class="is-flex"></div>
       </div>
@@ -39,5 +40,10 @@
   </footer>
 
   <script src="/script/main.js"></script>
+  <script>
+    const houManyTheme = gumData.length * 6;
+    const manyElement = document.getElementById("howMany");
+    manyElement.insertAdjacentHTML("afterbegin", houManyTheme);
+  </script>
 </body>
 </html>

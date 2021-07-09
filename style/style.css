@@ -426,6 +426,20 @@ footer .copy {
   }
 }
 
+.gum-body .gum-app .wrapper .record {
+  position: absolute;
+  bottom: 266px;
+  opacity: 0.7;
+  line-height: 1.4em;
+  padding-right: 14px;
+}
+
+@media (max-width: 640px) {
+  .gum-body .gum-app .wrapper .record {
+    bottom: 316px;
+  }
+}
+
 .gum-body .gum-app .wrapper .output {
   position: relative;
   width: 100%;
