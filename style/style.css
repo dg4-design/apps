@@ -297,7 +297,7 @@ header nav ul li a {
   position: relative;
   width: 100%;
   max-width: 500px;
-  height: 200px;
+  height: 250px;
   background-color: #f3e9be;
   padding: 16px;
   border-radius: 20px;
@@ -307,7 +307,7 @@ header nav ul li a {
 
 @media (max-width: 640px) {
   .gum-body .gum-app .wrapper {
-    height: 250px;
+    height: 300px;
   }
 }
 
@@ -315,6 +315,11 @@ header nav ul li a {
   position: relative;
   width: 100%;
   padding: 16px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
 }
 
 .gum-body .gum-app .wrapper .output::before, .gum-body .gum-app .wrapper .output::after {
@@ -337,13 +342,45 @@ header nav ul li a {
   right: -4px;
 }
 
-.gum-body .gum-app .wrapper .output #theme {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-size: 32px;
-  line-height: 1.4em;
+.gum-body .gum-app .wrapper .output #selected {
+  font-size: 24px;
   font-weight: bold;
+}
+
+.gum-body .gum-app .wrapper .output #card {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+  gap: 16px 8px;
+}
+
+.gum-body .gum-app .wrapper .output #card .item {
+  width: calc(50% - 4px);
+  line-height: 24px;
+  gap: 8px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #333;
+}
+
+.gum-body .gum-app .wrapper .output #card .item .number {
+  min-width: 24px;
+  height: 24px;
+  text-align: center;
+  background-color: #333;
+  border-radius: 12px;
+  color: #f3e9be;
+}
+
+.gum-body .gum-app .wrapper .output #card .item.accent .number {
+  background-color: #EF4456;
+}
+
+.gum-body .gum-app .wrapper .output #card .item.accent .theme {
+  font-weight: bold;
+  color: #EF4456;
 }
 
 .gum-body .gum-app .wrapper #gumButton {
@@ -357,7 +394,7 @@ header nav ul li a {
   height: fit-content;
   left: 0;
   right: 0;
-  bottom: 32px;
+  bottom: 22px;
   font-size: 20px;
   background-color: #388F87;
   color: #fff;

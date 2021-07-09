@@ -103,6 +103,38 @@ const gumData = [
     { id: 5, theme: "貨幣の" },
     { id: 6, theme: "羊の" },
   ],
+  [
+    { id: 1, theme: "体育の" },
+    { id: 2, theme: "クローンの" },
+    { id: 3, theme: "蒲鉾の" },
+    { id: 4, theme: "憧れの" },
+    { id: 5, theme: "小さな頃に読んだ本の" },
+    { id: 6, theme: "膝の" },
+  ],
+  [
+    { id: 1, theme: "歯の" },
+    { id: 2, theme: "日曜日の" },
+    { id: 3, theme: "おにぎりの具の" },
+    { id: 4, theme: "もしもの" },
+    { id: 5, theme: "価値の" },
+    { id: 6, theme: "引っ越しの" },
+  ],
+  [
+    { id: 1, theme: "トイレの" },
+    { id: 2, theme: "ヒョウの" },
+    { id: 3, theme: "プロの" },
+    { id: 4, theme: "公共施設の" },
+    { id: 5, theme: "ハサミの" },
+    { id: 6, theme: "池の" },
+  ],
+  [
+    { id: 1, theme: "日本酒の" },
+    { id: 2, theme: "大根の" },
+    { id: 3, theme: "日当たりの" },
+    { id: 4, theme: "ビンタの" },
+    { id: 5, theme: "限定の" },
+    { id: 6, theme: "電線の" },
+  ],
 ];
 
 const gumButton = document.getElementById("gumButton");
@@ -113,13 +145,40 @@ gumButton.onclick = function gumTalk() {
     return randomData;
   }
 
+  //ガムのデータをランダムに取得
   const getGum = random(gumData);
+
+  //↑で取得したガムのデータの中のトークテーマをランダムに取得
   const getTheme = random(getGum);
 
   // const numberElement = document.getElementById("number");
   // numberElement.innerHTML = JSON.stringify(getTheme.id);
 
-  const themeElement = document.getElementById("theme");
-  themeElement.innerHTML =
-    JSON.stringify(getTheme.theme).replace(/^"(.*)"$/, "$1") + "話";
+  var i = 0;
+  const themeElement = document.getElementById("card");
+
+  const result = [];
+  themeElement.textContent = "";
+
+  for (var i = 0; i < getGum.length; i++) {
+    result.push(i);
+
+    if (JSON.stringify(getGum[i].id) == getTheme.id) {
+      const kakikomuElements =
+        "<div class='item accent is-flex'><p class='number'>" +
+        JSON.stringify(getGum[i].id) +
+        "</p><p class='theme'>" +
+        JSON.stringify(getGum[i].theme).replace(/"/g, "") +
+        "話</p></div>";
+      themeElement.insertAdjacentHTML("afterbegin", kakikomuElements);
+    } else {
+      const kakikomuElements =
+        "<div class='item is-flex''><p class='number'>" +
+        JSON.stringify(getGum[i].id) +
+        "</p><p class='theme'>" +
+        JSON.stringify(getGum[i].theme).replace(/"/g, "") +
+        "話</p></div>";
+      themeElement.insertAdjacentHTML("afterbegin", kakikomuElements);
+    }
+  }
 };
