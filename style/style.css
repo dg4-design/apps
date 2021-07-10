@@ -340,7 +340,7 @@ header nav ul li a {
 
 .top-main .app-link .container .content .item .img {
   width: 100%;
-  height: 212px;
+  height: auto;
 }
 
 .top-main .app-link .container .content .item .over {
