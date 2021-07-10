@@ -13,10 +13,11 @@
     .container
       .content
         flex-wrap: wrap
+        gap: 8px
         @include sp
           flex-direction: column
         .item
-          width: 50%
+          width: calc(50% - 4px)
 
           flex-direction: column
 
