@@ -541,4 +541,83 @@ footer .copy {
 .gum-body .gum-app .wrapper #gumButton:hover {
   opacity: 0.9;
 }
+
+.janken-body {
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+}
+
+.janken-body .janken-app {
+  width: 100vw;
+  height: calc(100vh - 70px);
+  min-height: 700px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 12px;
+}
+
+@media (max-width: 640px) {
+  .janken-body .janken-app {
+    min-height: 500px;
+  }
+}
+
+.janken-body .janken-app form {
+  margin-bottom: 30px;
+}
+
+.janken-body .janken-app form .btn {
+  font-size: 16px;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: #388F87;
+  color: #fff;
+  padding: 5px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.janken-body .janken-app .output {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  gap: 24px;
+}
+
+.janken-body .janken-app .output .hand {
+  position: relative;
+  width: calc(50% - 12px);
+  height: 500px;
+}
+
+@media (max-width: 640px) {
+  .janken-body .janken-app .output .hand {
+    height: 200px;
+  }
+}
+
+.janken-body .janken-app .output .hand .finger {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.janken-body .janken-app .output .hand.right {
+  -webkit-transform: scale(-1, 1);
+          transform: scale(-1, 1);
+}
 /*# sourceMappingURL=style.css.map */

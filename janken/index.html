@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>謎じゃんけん</title>
+
+  <link rel="icon" href="/image/archive.png">
+  <link rel="stylesheet" href="/style/style.css">
+</head>
+<body class="janken-body">
+
+  <header class="is-flex">
+    <h1 class="title">謎じゃんけん</h1>
+    <nav>
+      <ul class="is-flex">
+        <li>
+          <a href="/">Top</a>
+        </li>
+        <li>
+          <a href="https://www.dgdgdgdg.com/about/">製作者</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="janken-app is-flex">
+    <div class="container">
+      <form onsubmit="playJanken(); return false;">
+        <input class="btn center" type="submit" value="じゃんけん！">
+      </form>
+      <div class="output is-flex">
+        <div class="hand left">
+          <div class="finger base"><img src="/image/janken/hand-base.png" alt=""></div>
+          <div class="finger" id="leftFinger1"><img src="/image/janken/finger1-close.png" /></div>
+          <div class="finger" id="leftFinger2"><img src="/image/janken/finger2-close.png" /></div>
+          <div class="finger" id="leftFinger3"><img src="/image/janken/finger3-close.png" /></div>
+          <div class="finger" id="leftFinger4"><img src="/image/janken/finger4-close.png" /></div>
+          <div class="finger" id="leftFinger5"><img src="/image/janken/finger5-close.png" /></div>
+        </div>
+        <div class="hand right">
+          <div class="finger base"><img src="/image/janken/hand-base.png" alt=""></div>
+          <div class="finger" id="rightFinger1"><img src="/image/janken/finger1-close.png" /></div>
+          <div class="finger" id="rightFinger2"><img src="/image/janken/finger2-close.png" /></div>
+          <div class="finger" id="rightFinger3"><img src="/image/janken/finger3-close.png" /></div>
+          <div class="finger" id="rightFinger4"><img src="/image/janken/finger4-close.png" /></div>
+          <div class="finger" id="rightFinger5"><img src="/image/janken/finger5-close.png" /></div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <footer>
+    <p class="copy center">©︎ 2021 dgdgdgdg</p>
+  </footer>
+
+  <script src="/script/janken.js"></script>
+</body>
+</html>
