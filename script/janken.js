@@ -16,10 +16,10 @@ function half(element, finger) {
 
   if (r == 0) {
     element.innerHTML =
-      "<img src='/image/janken/finger" + finger + "-close.png' />";
+      "<img src='/image/janken/finger" + finger + "-close.webp' />";
   } else if (r == 1) {
     element.innerHTML =
-      "<img src='/image/janken/finger" + finger + "-open.png' />";
+      "<img src='/image/janken/finger" + finger + "-open.webp' />";
   }
 }
 
