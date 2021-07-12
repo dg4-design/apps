@@ -27,9 +27,7 @@
 
   <main class="janken-app is-flex">
     <div class="container">
-      <form onsubmit="playJanken(); return false;">
-        <input class="btn center" type="submit" value="じゃんけん！">
-      </form>
+      <button id="jankenButton" class="btn center" onclick="playJanken();">じゃんけん！</button>
       <div class="output is-flex">
         <div class="hand left">
           <div class="finger base"><img src="/image/janken/hand-base.png" alt=""></div>
