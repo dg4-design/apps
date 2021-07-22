@@ -1,46 +1,50 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Topic Randomizer</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Topic Randomizer</title>
 
-  <link rel="icon" href="/image/archive.png">
-  <link rel="stylesheet" href="/style/style.css">
-</head>
-<body class="gum-body">
+    <link rel="icon" href="/image/archive.png" />
+    <link rel="stylesheet" href="/style/style.css" />
+  </head>
+  <body class="gum-body">
+    <header class="is-flex">
+      <h1 class="title">Topic Randomizer</h1>
+      <nav>
+        <ul class="is-flex">
+          <li>
+            <a href="/">Top</a>
+          </li>
+          <li>
+            <a
+              href="https://www.dgdgdgdg.com/"
+              style="height: auto; width: 100px"
+            >
+              <img src="https://www.dgdgdgdg.com/assets/image/logo.svg" />
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-  <header class="is-flex">
-    <h1 class="title">Topic Randomizer</h1>
-    <nav>
-      <ul class="is-flex">
-        <li>
-          <a href="/">Top</a>
-        </li>
-        <li>
-          <a href="https://www.dgdgdgdg.com/about/" style="height:auto; width:100px;">
-            <img src="https://www.dgdgdgdg.com/image/logo.svg">
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-
-  <main class="gum-app is-flex">
-    <div class="wrapper is-flex">
-      <div class="record">現在<span id="howMany"></span>個の話題が登録されています</div>
-      <div class="output is-flex">
-        <div id="card" class="is-flex"></div>
+    <main class="gum-app is-flex">
+      <div class="wrapper is-flex">
+        <div class="record">
+          現在<span id="howMany"></span>個の話題が登録されています
+        </div>
+        <div class="output is-flex">
+          <div id="card" class="is-flex"></div>
+        </div>
+        <button id="gumButton" class="center">Let's Talk!</button>
       </div>
-      <button id="gumButton" class="center">Let's Talk!</button>
-    </div>
-  </main>
-  
-  <footer>
-    <p class="copy center">©︎ 2021 dgdgdgdg</p>
-  </footer>
+    </main>
 
-  <script src="/script/gumTalk.js"></script>
-</body>
+    <footer>
+      <p class="copy center">©︎ 2021 dgdgdgdg</p>
+    </footer>
+
+    <script src="/script/gumTalk.js"></script>
+  </body>
 </html>
