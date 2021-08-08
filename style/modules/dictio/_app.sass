@@ -1,0 +1,44 @@
+.dictio-body
+  .dictio-app
+    min-height: calc(100vh - 70px)
+    padding:
+      top: 100px
+      bottom: 120px
+
+    font-size: 20px
+    .container
+      form
+        flex-direction: column
+
+        margin-bottom: 24px
+
+        textarea
+          height: 10em
+          resize: none
+
+        input, textarea
+          font-size: 20px
+          display: block
+
+          padding: 8px
+
+          border: none
+          border:
+            left: 4px solid #333
+            bottom: 1px solid #333
+
+          &:not(:first-child)
+            margin-top: 8px
+
+          &[type=submit]
+            width: 100px
+
+            border: 1px solid #333
+            border-radius: 50px
+
+            background: none
+
+      #output
+        line-height: 1.5em
+        .bold
+          font-weight: bold

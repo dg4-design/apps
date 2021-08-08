@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>辞書風ジェネレーター</title>
+
+    <link rel="icon" href="/image/archive.png" />
+    <link rel="stylesheet" href="/style/style.css" />
+  </head>
+  <body class="dictio-body">
+    <header class="is-flex">
+      <h1 class="title">辞書風ジェネレーター</h1>
+      <nav>
+        <ul class="is-flex">
+          <li>
+            <a href="/">Top</a>
+          </li>
+          <li>
+            <a
+              href="https://www.dgdgdgdg.com/"
+              style="height: auto; width: 100px"
+            >
+              <img src="https://www.dgdgdgdg.com/assets/image/logo.svg" />
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="dictio-app is-flex">
+      <div class="container center">
+        <form onsubmit="runDic(); return false" class="is-flex">
+          <input type="text" placeholder="読み" id="read" required />
+          <input type="text" placeholder="書き" id="write" required />
+          <textarea
+            type="text"
+            placeholder="意味"
+            id="mean"
+            required
+          ></textarea>
+          <input type="submit" value="生成" class="center" />
+        </form>
+        <div id="output"></div>
+      </div>
+    </main>
+
+    <footer>
+      <p class="copy center">©︎ 2021 dgdgdgdg</p>
+    </footer>
+
+    <script src="/script/dictio.js"></script>
+  </body>
+</html>

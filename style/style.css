@@ -617,4 +617,52 @@ footer .copy {
   -webkit-transform: scale(-1, 1);
           transform: scale(-1, 1);
 }
+
+.dictio-body .dictio-app {
+  min-height: calc(100vh - 70px);
+  padding-top: 100px;
+  padding-bottom: 120px;
+  font-size: 20px;
+}
+
+.dictio-body .dictio-app .container form {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 24px;
+}
+
+.dictio-body .dictio-app .container form textarea {
+  height: 10em;
+  resize: none;
+}
+
+.dictio-body .dictio-app .container form input, .dictio-body .dictio-app .container form textarea {
+  font-size: 20px;
+  display: block;
+  padding: 8px;
+  border: none;
+  border-left: 4px solid #333;
+  border-bottom: 1px solid #333;
+}
+
+.dictio-body .dictio-app .container form input:not(:first-child), .dictio-body .dictio-app .container form textarea:not(:first-child) {
+  margin-top: 8px;
+}
+
+.dictio-body .dictio-app .container form input[type=submit], .dictio-body .dictio-app .container form textarea[type=submit] {
+  width: 100px;
+  border: 1px solid #333;
+  border-radius: 50px;
+  background: none;
+}
+
+.dictio-body .dictio-app .container #output {
+  line-height: 1.5em;
+}
+
+.dictio-body .dictio-app .container #output .bold {
+  font-weight: bold;
+}
 /*# sourceMappingURL=style.css.map */
