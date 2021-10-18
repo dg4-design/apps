@@ -17,10 +17,10 @@ function readGum() {
 
 const gumData = readGum();
 
-const houManyTheme = gumData.length * 6;
+const howManyTheme = gumData.length * 6;
 const manyElement = document.getElementById("howMany");
 
-manyElement.insertAdjacentHTML("afterbegin", houManyTheme);
+manyElement.insertAdjacentHTML("afterbegin", howManyTheme);
 
 const themeElement = document.getElementById("card");
 const gumButton = document.getElementById("gumButton");
