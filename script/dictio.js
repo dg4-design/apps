@@ -5,8 +5,7 @@ function runDic() {
 
   const output = document.getElementById("output");
 
-  output.innerHTML =
-    `<p><span class="bold">${read}</span>` + `【${write}】` + `${mean}</p>`;
+  output.innerHTML = `<p><span class="bold">${read}</span>【${write}】${mean}</p>`;
 
   read = "";
   write = "";

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>歴史ジェネレーター</title>
+
+    <link
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" href="/image/archive.png" />
+    <link rel="stylesheet" href="/style/style.css" />
+  </head>
+  <body class="history-body">
+    <header class="is-flex">
+      <h1 class="title">歴史ジェネレーター</h1>
+      <nav>
+        <ul class="is-flex">
+          <li>
+            <a href="/">Top</a>
+          </li>
+          <li>
+            <a
+              href="https://www.dgdgdgdg.com/"
+              style="height: auto; width: 100px"
+            >
+              <img src="https://www.dgdgdgdg.com/assets/image/logo.svg" />
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="history-app is-flex">
+      <div class="container center">
+        <form id="form" onsubmit="runHistory(); return false">
+          <div id="formGroup" class="">
+            <div id="formChank0" class="form-chank is-flex">
+              <div class="input-area is-flex">
+                <input type="date" value="2021-01-01" required />
+                <textarea
+                  type="text"
+                  placeholder="歴史の内容"
+                  required
+                ></textarea>
+              </div>
+              <button id="0" onclick="deleteForm(this)">
+                <i class="far fa-trash-alt"></i>
+              </button>
+            </div>
+          </div>
+          <input type="button" value="＋" onclick="addForm()" />
+          <input type="submit" value="生成" class="center" />
+        </form>
+        <div id="output"></div>
+      </div>
+    </main>
+
+    <footer>
+      <p class="copy center">©︎ 2021 dgdgdgdg</p>
+    </footer>
+
+    <script src="/script/history.js"></script>
+  </body>
+</html>

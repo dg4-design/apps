@@ -665,4 +665,169 @@ footer .copy {
 .dictio-body .dictio-app .container #output .bold {
   font-weight: bold;
 }
+
+.history-body .history-app {
+  height: auto;
+  min-height: calc(100vh - 70px);
+}
+
+.history-body .history-app .container {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.history-body .history-app .container #form #formGroup .form-chank .input-area {
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  .history-body .history-app .container #form #formGroup .form-chank .input-area {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.history-body .history-app .container #form #formGroup .form-chank .input-area input[type="date"] {
+  font-size: 16px;
+  height: 32px;
+  min-width: 150px;
+  padding-left: 8px;
+  border: none;
+  border-radius: 0px;
+  border-left: 4px solid #888;
+  background-color: #f7f7f7;
+  margin-left: 0px;
+  -webkit-appearance: none;
+}
+
+@media (max-width: 640px) {
+  .history-body .history-app .container #form #formGroup .form-chank .input-area input[type="date"] {
+    width: 100%;
+    min-width: none;
+  }
+}
+
+.history-body .history-app .container #form #formGroup .form-chank .input-area textarea {
+  font-size: 16px;
+  resize: none;
+  height: 140px;
+  width: 100%;
+  padding: 6px 8px;
+  border: none;
+  border-radius: 0px;
+  border-left: 4px solid #888;
+  margin-left: 8px;
+  background-color: #f7f7f7;
+}
+
+@media (max-width: 640px) {
+  .history-body .history-app .container #form #formGroup .form-chank .input-area textarea {
+    margin-left: 0px;
+    margin-top: 8px;
+  }
+}
+
+.history-body .history-app .container #form #formGroup .form-chank button {
+  height: 32px;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 18px;
+  margin-left: 8px;
+}
+
+.history-body .history-app .container #form #formGroup .form-chank button i {
+  color: #d51a1a;
+}
+
+.history-body .history-app .container #form #formGroup .form-chank:not(:first-child) {
+  margin-top: 24px;
+}
+
+.history-body .history-app .container #form input[type="button"], .history-body .history-app .container #form input[type="submit"] {
+  -webkit-appearance: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: auto;
+  font-size: 16px;
+  padding: 16px 20px;
+  border: 1px solid #333;
+  border-radius: 50px;
+  background: none;
+  margin-top: 20px;
+}
+
+.history-body .history-app .container #form input[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  margin-left: 8px;
+}
+
+.history-body .history-app .container #output {
+  position: relative;
+  margin-top: 40px;
+}
+
+.history-body .history-app .container #output .vartica-line {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  padding-left: 56px;
+}
+
+.history-body .history-app .container #output .vartica-line .line {
+  background-color: #333;
+  width: 4px;
+  height: 100%;
+}
+
+.history-body .history-app .container #output .his-list {
+  padding: 20px 0px;
+  max-width: 100%;
+}
+
+.history-body .history-app .container #output .his-list .his-content {
+  font-size: 16px;
+  line-height: 32px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+.history-body .history-app .container #output .his-list .his-content:not(:first-child) {
+  margin-top: 32px;
+}
+
+.history-body .history-app .container #output .his-list .his-content .content-date {
+  font-weight: bold;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 30px;
+}
+
+.history-body .history-app .container #output .his-list .his-content .content-date .year {
+  width: 50px;
+}
+
+.history-body .history-app .container #output .his-list .his-content .content-date .dot {
+  width: 16px;
+  height: 16px;
+  background-color: #333;
+  border: 4px solid #fff;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+
+.history-body .history-app .container #output .his-list .his-content .content-date .month-date {
+  width: 50px;
+}
 /*# sourceMappingURL=style.css.map */
