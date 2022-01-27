@@ -1,12 +1,10 @@
 const half = (element, finger) => {
   const r = Math.floor(Math.random() * 2);
-  const target = document.getElementById(`${element}`);
-
-  if (r == 0) {
-    target.innerHTML = `<img src='/image/janken/finger${finger}-close.webp' />`;
-  } else if (r == 1) {
-    target.innerHTML = `<img src='/image/janken/finger${finger}-open.webp' />`;
-  }
+  const img = document.createElement("img");
+  document.getElementById(`${element}`).innerHTML = "";
+  document.getElementById(`${element}`).appendChild(img);
+  img.src = `/image/janken/finger${finger}-open.webp`;
+  r == 0 && (img.src = `/image/janken/finger${finger}-close.webp`);
 };
 
 const fingerLoop = (hand) =>
