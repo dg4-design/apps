@@ -40,21 +40,7 @@
     <main class="history-app is-flex">
       <div class="container center">
         <form id="form" onsubmit="runHistory(); return false">
-          <div id="formGroup" class="">
-            <div id="formChank0" class="form-chank is-flex">
-              <div class="input-area is-flex">
-                <input type="date" value="2021-01-01" required />
-                <textarea
-                  type="text"
-                  placeholder="歴史の内容"
-                  required
-                ></textarea>
-              </div>
-              <button id="0" onclick="deleteForm(this)">
-                <i class="far fa-trash-alt"></i>
-              </button>
-            </div>
-          </div>
+          <div id="formGroup"></div>
           <input type="button" value="＋" onclick="addForm()" />
           <input type="submit" value="生成" class="center" />
         </form>

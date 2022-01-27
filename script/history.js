@@ -1,34 +1,38 @@
-var i = 1;
-function addForm() {
-  const parent = document.getElementById("formGroup");
-  parent.insertAdjacentHTML(
-    "beforeend",
-    `
-    <div id="formChank${i}" class="form-chank is-flex">
-      <div class="input-area is-flex">
-        <input type="date" value="2021-01-01" required />
-        <textarea
-          type="text"
-          placeholder="歴史の内容"
-          required
-        ></textarea>
-      </div>
-      <button id="${i}" onclick="deleteForm(this)">
-        <i class="far fa-trash-alt"></i>
-      </button>
-    </div>
-    `
-  );
+let i = 0;
+const addForm = () => {
+  const formChank = document.createElement("div");
+  formChank.className = "form-chank is-flex";
+  document.getElementById("formGroup").appendChild(formChank);
+
+  const inputArea = document.createElement("div");
+  inputArea.className = "input-area is-flex";
+  formChank.appendChild(inputArea);
+
+  const dateInput = document.createElement("input");
+  dateInput.type = "date";
+  dateInput.value = "2022-01-01";
+  dateInput.required = true;
+  inputArea.appendChild(dateInput);
+
+  const textInput = document.createElement("textarea");
+  textInput.type = "text";
+  textInput.placeholder = "歴史の内容";
+  textInput.required = true;
+  inputArea.appendChild(textInput);
+
+  const deleteButton = document.createElement("button");
+  deleteButton.addEventListener("click", () => formChank.remove());
+  formChank.appendChild(deleteButton);
+
+  const buttonIcon = document.createElement("i");
+  buttonIcon.className = "far fa-trash-alt";
+  deleteButton.appendChild(buttonIcon);
 
   i++;
-}
+};
+addForm();
 
-function deleteForm(target) {
-  const targetElm = document.getElementById(`formChank${target.id}`);
-  targetElm.remove();
-}
-
-function runHistory() {
+const runHistory = () => {
   const formGroupCol = document.getElementById("formGroup").children;
   var data = [];
 
@@ -76,4 +80,4 @@ function runHistory() {
       `
     );
   }
-}
+};
