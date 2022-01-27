@@ -33,51 +33,60 @@ const addForm = () => {
 addForm();
 
 const runHistory = () => {
-  const formGroupCol = document.getElementById("formGroup").children;
-  var data = [];
-
-  for (var j = 0; j < formGroupCol.length + 1; j++) {
-    const formChank = document.getElementById(`formChank${j}`);
-    if (formChank !== null) {
-      data.push({
-        date: new Date(formChank.children[0].children[0].value),
-        content: formChank.children[0].children[1].value,
-      });
-    }
-  }
+  const formGroupCol = Array.from(
+    document.getElementById("formGroup").children
+  );
+  const data = [];
+  formGroupCol.forEach((fChank) => {
+    data.push({
+      date: new Date(fChank.children[0].children[0].value),
+      content: fChank.children[0].children[1].value,
+    });
+  });
 
   const output = document.getElementById("output");
+
+  const varticaLine = document.createElement("div");
+  varticaLine.className = "vartica-line";
   output.innerHTML = "";
+  output.appendChild(varticaLine);
 
-  output.insertAdjacentHTML(
-    "beforeend",
-    `
-    <div class="vartica-line">
-      <div class="line"></div>
-    </div>
-    <ul id="hisList" class="his-list"></ul>
-    `
-  );
+  const line = document.createElement("div");
+  line.className = "line";
+  varticaLine.appendChild(line);
 
-  const hisList = document.getElementById("hisList");
+  const hisList = document.createElement("ul");
+  hisList.className = "his-list";
+  output.appendChild(hisList);
 
-  for (var k = 0; k < data.length; k++) {
-    hisList.insertAdjacentHTML(
-      "beforeend",
-      `
-      <li class="his-content is-flex">
-        <div class="content-date is-flex">
-          <div class="year">${data[k].date.getFullYear()}</div>
-          <div class="dot"></div>
-          <div class="month-date">${data[k].date.getMonth() + 1}/${data[
-        k
-      ].date.getDate()}</div>
-        </div>
-        <div class="content-text">
-          ${data[k].content}
-        </div>
-      </li>
-      `
-    );
-  }
+  data.forEach((content) => {
+    const hisContent = document.createElement("li");
+    hisContent.className = "his-content is-flex";
+    hisList.appendChild(hisContent);
+
+    const contentDate = document.createElement("div");
+    contentDate.className = "content-date is-flex";
+    hisContent.appendChild(contentDate);
+
+    const year = document.createElement("div");
+    year.className = "year";
+    year.innerText = content.date.getFullYear();
+    contentDate.appendChild(year);
+
+    const dot = document.createElement("div");
+    dot.className = "dot";
+    contentDate.appendChild(dot);
+
+    const monthDate = document.createElement("div");
+    monthDate.className = "month-date";
+    monthDate.innerText = `${
+      content.date.getMonth() + 1
+    }/${content.date.getDate()}`;
+    contentDate.appendChild(monthDate);
+
+    const contentText = document.createElement("div");
+    contentText.className = "content-text";
+    contentText.innerText = content.content;
+    hisContent.appendChild(contentText);
+  });
 };
