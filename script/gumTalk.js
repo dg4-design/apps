@@ -16,19 +16,12 @@ const runGum = (gumData) => {
     //↑で取得したガムのデータの中のトークテーマをランダムに取得
     const getTheme = random(getGum);
 
-    const result = [];
     themeElement.textContent = "";
 
     getGum.forEach((e, i) => {
-      result.push(i);
-
       const themeItem = document.createElement("div");
-
-      if (getGum[i] == getTheme) {
-        themeItem.className = "item accent is-flex";
-      } else {
-        themeItem.className = "item is-flex";
-      }
+      themeItem.className = "item is-flex";
+      e == getTheme && themeItem.classList.add("accent");
 
       const itemNum = document.createElement("p");
       itemNum.className = "number";
@@ -36,7 +29,7 @@ const runGum = (gumData) => {
 
       const itemTxt = document.createElement("p");
       itemTxt.className = "theme";
-      itemTxt.innerText = `${getGum[i]}話`;
+      itemTxt.innerText = `${e}話`;
 
       themeItem.appendChild(itemNum);
       themeItem.appendChild(itemTxt);
